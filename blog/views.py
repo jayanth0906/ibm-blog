@@ -41,7 +41,6 @@ def post_list(request):
         tone_input = ToneInput(post.text)
         tone = service.tone(tone_input=tone_input, content_type="application/json")
         tone2 = str(tone)
-#        post.toneObj2['document_tone']['tones'][0]['tone_name']
         post.tone3 = (tone2[1:500])
         print(post.tone3)
 
